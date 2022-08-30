@@ -1,0 +1,35 @@
+.Header {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 24px;
+}
+
+.Header_logo img {
+    width: 35px;
+}
+
+.Header_nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.nav_item {
+    margin-right: 26px;
+}
+
+.Header_toCv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--textColor-special);
+    width: 85px;
+    height: 40px;
+}
+
+.nav_item:last-child {
+    margin: 0px;
+}

@@ -1,0 +1,15 @@
+:root {
+    --primary-color: #0C1019;
+    --secondary-color: #0D223F;
+    --primary-text: #D5D6D9;
+    --backgroundColor: #0A192F;
+    --textColor-primary: #CCD6F6;
+    --textColor-secondary: #A8B2D1;
+    --textColor-normal: #8892B0;
+    --shadow-header: 0px 10px 30px -10px rgba(2, 12, 17, 0.7);
+    --textColor-special: #64FFDA;
+    --shadow-navy: rgba(2, 12, 27, 0.7);
+    --navy: #0A192F;
+    --green: #64ffda;
+    --light-navy: #112240;
+}

@@ -1,0 +1,37 @@
+.MobileNavbar_container {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    padding: 50px 10px;
+    width: min(75vw, 400px);
+    height: 100vh;
+    outline: 0px;
+    background-color: var(--light-navy);
+    box-shadow: -10px 0px 30px -15px var(--navy-shadow);
+    z-index: 9;
+    transform: translateX(0vw);
+    visibility: visible;
+    gap: 50px;
+}
+
+.Header_nav i {
+    position: relative;
+    z-index: 10;
+}
+
+.mobile_nav_item {
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.mobile_nav_item .Header_toCv {
+    width: auto;
+    padding: 8px 12px;
+}
