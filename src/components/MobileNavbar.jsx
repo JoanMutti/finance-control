@@ -25,7 +25,7 @@ const MobileNavbar = ({ navItems }) => {
   return (
     <nav className="Header_nav">
       <motion.i onClick={toggleMenu} animate={menuOpen ? "open" : "closed"}>
-        <svg width="30" height="30" viewBox="0 0 20 18">
+        <svg width="30" height="25" viewBox="0 0 20 18">
           <Path
             variants={{
               closed: { d: "M 2 2.5 L 20 2.5" },

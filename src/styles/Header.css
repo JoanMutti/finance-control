@@ -7,6 +7,12 @@
     padding: 4px 24px;
 }
 
+.Header h2 {
+    font-size: 18px;
+    margin-left: calc(50% - 75px);
+    margin-bottom: 8px;
+}
+
 .Header_logo img {
     width: 35px;
 }

@@ -1,7 +1,12 @@
 import React from "react";
+import { InOutMoneyView } from "../components/InOutMoneyView";
 
 const Dashboard = () => {
-  return <div></div>;
+  return (
+    <div>
+      <InOutMoneyView />
+    </div>
+  );
 };
 
 export default Dashboard;
