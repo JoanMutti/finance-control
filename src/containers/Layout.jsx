@@ -1,13 +1,13 @@
 import React from "react";
+import AddInOut from "../components/AddInOut";
 import Header from "../components/Header";
-import "../styles/Layout.css";
 
 const Layout = ({ children }) => {
   return (
     <main>
       <Header />
-      <section>{children}</section>
-      <button className="btn_add">+</button>
+      <section id="content">{children}</section>
+      <AddInOut />
     </main>
   );
 };

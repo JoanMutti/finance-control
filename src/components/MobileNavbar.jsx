@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import NavItems from "./NavItems";
 import { motion } from "framer-motion";
 import "../styles/MobileNavbar.css";
@@ -17,10 +17,10 @@ const MobileNavbar = ({ navItems }) => {
     setMenuOpen(!menuOpen);
   };
 
-  useEffect(() => {
-    menuOpen && document.body.classList.add("blur");
-    return () => document.body.classList.remove("blur");
-  }, [menuOpen]);
+  // useEffect(() => {
+  //   menuOpen && document.body.classList.add("blur");
+  //   return () => document.body.classList.remove("blur");
+  // }, [menuOpen]);
 
   return (
     <nav className="Header_nav">

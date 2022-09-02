@@ -1,0 +1,31 @@
+.AddInOut {
+    position: fixed;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--green);
+    box-shadow: var(--shadow-header);
+    bottom: 24px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 32px;
+}
+
+.btn_add {
+    border: none;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    font-size: 32px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.AddInOut form {
+    width: 100%;
+    height: 100%;
+    padding: 8px 16px;
+    display: none;
+}

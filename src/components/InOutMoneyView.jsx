@@ -27,7 +27,7 @@ const InOutView = ({ data }) => (
       <div className="InOutView_item" key={index}>
         <p className="InOutView_date">5/6</p>
         <p className="InOutView_for">Colegio</p>
-        <p>$55.500</p>
+        <p className="InOutView_amount">$55.500</p>
       </div>
     ))}
   </div>
@@ -43,6 +43,11 @@ export const InOutMoneyView = () => {
   return (
     <div className="InOutMoneyView">
       <ChangeView view={view} handleChangeView={handleChangeView} />
+      <div className="InOutView_item InOutView_item_titles ">
+        <p className="InOutView_date">Fecha</p>
+        <p className="InOutView_for">Motivo</p>
+        <p className="InOutView_amount">Monto</p>
+      </div>
       <InOutView data={dataList} />
     </div>
   );

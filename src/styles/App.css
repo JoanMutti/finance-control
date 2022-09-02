@@ -15,3 +15,19 @@ body::before {
   filter: blur(100px);
   background-color: #102C51;
 }
+
+.blur {
+  overflow: hidden;
+}
+
+body.blur .Header h2, body.blur .Header svg, body.blur #content>* {
+  filter: blur(3px) brightness(0.7);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  pointer-events: none;
+  user-select: none;
+}
+
+.body.blur .Header>* {
+  pointer-events: none;
+  user-select: none;
+}

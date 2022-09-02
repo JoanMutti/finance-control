@@ -9,6 +9,7 @@
     border-radius: 12px;
     position: relative;
     height: 30px;
+    margin-bottom: 16px;
 }
 
 .ChangeView_background {
@@ -30,14 +31,15 @@
 
 .InOutView {
     /* background-color: var(--card-color); */
-    margin-top: 16px;
+    margin-top: 8px;
     /* padding: 16px 12px; */
     border-radius: 8px;
 }
 
 .InOutView_item {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
     margin-bottom: 8px;
     background-color: var(--card-color);
     padding: 8px;
@@ -45,10 +47,23 @@
     font-weight: 500;
 }
 
+
 .InOutView_date {
     font-weight: 600;
 }
 
+.InOutView_amount {
+    text-align: right;
+}
+
+.InOutView_for {
+    text-align: center;
+}
+
+.InOutView_item_titles {
+    /* background-color: var(--navy); */
+    border: 2px solid var(--green);
+}
 
 /* 
 .btn-active {
