@@ -6,22 +6,15 @@ import { toDateInputValue } from "../utils/toDateInputValue";
 
 const variants = {
   open: {
-    width: "300px",
-    minHeight: "450px",
-    right: "auto",
-    borderRadius: "0px",
-    left: "calc(50% - 150px)",
+    width: "280px",
+    minHeight: "80vh",
+    borderRadius: "8px",
     backgroundColor: "var(--card-color)",
     bottom: "24px",
   },
   closed: {
-    bottom: "24px",
-    right: "24px",
-    width: "40px",
-    height: "40px",
     borderRadius: "50%",
     backgroundColor: "var(--green)",
-    fontSize: "32px",
   },
 };
 

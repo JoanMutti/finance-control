@@ -17,6 +17,7 @@
 
 .AddInOut input[type=submit] {
     cursor: pointer;
+    color: inherit;
 }
 
 .AddInOut input[type=submit]:hover {
