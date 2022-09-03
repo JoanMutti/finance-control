@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "../styles/InOutMoneyView.css";
+import { getTransactions } from "../utils/getTransactions";
 
 const dataList = ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1"];
 
@@ -21,24 +22,33 @@ const ChangeView = ({ view, handleChangeView }) => (
   </div>
 );
 
-const InOutView = ({ data }) => (
-  <div className="InOutView">
-    {data.map((item, index) => (
-      <div className="InOutView_item" key={index}>
-        <p className="InOutView_date">5/6</p>
-        <p className="InOutView_for">Colegio</p>
-        <p className="InOutView_amount">$55.500</p>
-      </div>
-    ))}
-  </div>
-);
+const InOutView = ({ transactions }) => {
+  return (
+    <div className="InOutView">
+      {transactions.map((transaction) => (
+        <div className="InOutView_item" key={`Transaction-${transaction.id}`}>
+          <p className="InOutView_date">
+            {transaction.day}/{transaction.month}
+          </p>
+          <p className="InOutView_for">{transaction.reason}</p>
+          <p className="InOutView_amount">${transaction.amount}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 export const InOutMoneyView = () => {
   const [view, setView] = useState("in");
+  const [transactions, setTransactions] = useState([]);
 
   const handleChangeView = (newView) => {
     setView(newView);
   };
+
+  useEffect(() => {
+    getTransactions().then((transactions) => setTransactions(transactions));
+  }, []);
 
   return (
     <div className="InOutMoneyView">
@@ -48,7 +58,7 @@ export const InOutMoneyView = () => {
         <p className="InOutView_for">Motivo</p>
         <p className="InOutView_amount">Monto</p>
       </div>
-      <InOutView data={dataList} />
+      <InOutView transactions={transactions.filter((transaction) => transaction.type === view)} />
     </div>
   );
 };

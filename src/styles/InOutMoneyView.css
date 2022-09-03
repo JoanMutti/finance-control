@@ -75,3 +75,7 @@
     border: 1px solid var(--primary-button-color);
     background-color: transparent;
 } */
+
+.InOutView_item>* {
+    text-transform: capitalize;
+}
