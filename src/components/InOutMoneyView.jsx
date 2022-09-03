@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import "../styles/InOutMoneyView.css";
 import { getTransactions } from "../utils/getTransactions";
 
-const dataList = ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1"];
-
 const variants = {
   in: { left: "0px", right: "auto", borderRadius: "12px 0px 0px 12px" },
   out: { right: "0px", left: "auto", borderRadius: "0px 12px 12px 0px" },
