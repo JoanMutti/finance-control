@@ -6,7 +6,7 @@ import { toDateInputValue } from "../utils/toDateInputValue";
 
 const variants = {
   open: {
-    width: "280px",
+    width: "300px",
     minHeight: "80vh",
     borderRadius: "8px",
     backgroundColor: "var(--card-color)",
@@ -23,7 +23,7 @@ const AddInOut = () => {
   const [type, setType] = useState("in");
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState(toDateInputValue(new Date()));
-  const [method, setMethod] = useState("");
+  const [method, setMethod] = useState("cash");
   const [reason, setReason] = useState("");
 
   useEffect(() => {
@@ -37,6 +37,10 @@ const AddInOut = () => {
 
   const handleTypeChange = (e) => {
     setType(e.target.value);
+  };
+
+  const handleMethodChange = (e) => {
+    setMethod(e.target.value);
   };
 
   const handleSubmit = (e) => {
@@ -66,9 +70,13 @@ const AddInOut = () => {
           <option value="in">Ingreso</option>
           <option value="out">Gasto</option>
         </select>
-        <Input value={date} handleChange={setDate} type="date" placeholder="Monto" title="Monto" />
+        <Input value={date} handleChange={setDate} type="date" placeholder="Fecha" title="Fecha" />
         <Input value={amount} handleChange={setAmount} type="number" placeholder="Monto" title="Monto" />
-        <Input value={method} handleChange={setMethod} type="text" placeholder="Metodo" title="Metodo" />
+        <select name="method" id="method" onChange={handleMethodChange}>
+          <option value="cash">Efectivo</option>
+          <option value="credit">Credito</option>
+          <option value="debit">Debito</option>
+        </select>
         <Input value={reason} handleChange={setReason} type="text" placeholder="Motivo" title="Motivo" />
         <input type="submit" value="Cargar" />
       </motion.form>
