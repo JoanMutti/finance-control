@@ -1,27 +1,14 @@
 import React, { useState, useLayoutEffect } from "react";
+import { auth } from "../utils/firebaseConfig";
 import MobileNavbar from "./MobileNavbar";
 import NavItems from "./NavItems";
 
 const navItems = [
   {
-    text: "Sobre Mí",
-    href: "#about",
-  },
-  {
-    text: "Proyectos",
-    href: "#projects",
-  },
-  {
-    text: "Contacto",
-    href: "#contact",
-  },
-  {
-    text: "Curriculum",
-    href: "https://google.com",
-    props: {
-      target: "_blank",
-      rel: "noreferrer",
-      className: "Header_toCv",
+    text: "Cerrar Sesión",
+    onClick: () => {
+      auth.signOut();
+      window.location.reload();
     },
   },
 ];
@@ -40,7 +27,7 @@ const Navbar = () => {
       <nav className="Header_nav">
         <ul className="Header_nav">
           {navItems.map((item) => (
-            <NavItems item={item} key={`Nav-${item.text}`} liStyle="nav_item" />
+            <NavItems item={item} onClick={item?.onClick} key={`Nav-${item.text}`} liStyle="nav_item" />
           ))}
         </ul>
       </nav>

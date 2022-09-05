@@ -50,7 +50,7 @@ const MobileNavbar = ({ navItems }) => {
       </motion.i>
       <motion.ul animate={menuOpen ? "open" : "closed"} variants={variants} className="MobileNavbar_container">
         {navItems.map((item) => (
-          <NavItems item={item} key={`Nav-${item.text}`} onClick={toggleMenu} liStyle="mobile_nav_item" />
+          <NavItems item={item} key={`Nav-${item.text}`} onClick={item?.onClick} liStyle="mobile_nav_item" />
         ))}
       </motion.ul>
     </nav>

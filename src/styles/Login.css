@@ -1,0 +1,30 @@
+.Login {
+    height: 100vh;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.Login_text p {
+    font-size: 12px;
+    font-style: italic;
+    width: 260px;
+    margin: 8px auto;
+}
+
+.Login_form {
+    margin: 40px auto auto;
+    width: 100%;
+}
+
+.Login_form .Input-label {
+    top: calc(50% + -6px);
+}
+
+.Login_form input {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.Login .focus {
+    top: -1px;
+}

@@ -1,17 +1,31 @@
 import { Routes, Route } from "react-router-dom";
 import Dashboard from "../pages/Dashboard";
 import Layout from "../containers/Layout";
+import Login from "../pages/Login";
 import "../styles/vars.css";
 import "../styles/App.css";
+import { useAuth } from "../hooks/useAuth";
 
 function App() {
-  return (
-    <Layout>
+  const auth = useAuth();
+
+  if (!auth?.user) {
+    return (
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<Login />} />
       </Routes>
-    </Layout>
-  );
+    );
+  }
+
+  if (auth?.user) {
+    return (
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+        </Routes>
+      </Layout>
+    );
+  }
 }
 
 export default App;

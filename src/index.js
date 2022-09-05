@@ -4,12 +4,15 @@ import App from "./routes/App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
+import { ProviderAuth } from "./hooks/useAuth";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <App />
+      <ProviderAuth>
+        <App />
+      </ProviderAuth>
     </React.StrictMode>
   </BrowserRouter>
 );
