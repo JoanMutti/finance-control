@@ -29,7 +29,7 @@ const InOutView = ({ transactions }) => {
             {transaction.day}/{transaction.month}
           </p>
           <p className="InOutView_for">{transaction.reason}</p>
-          <p className="InOutView_amount">${transaction.amount}</p>
+          <p className="InOutView_amount">${Number(transaction.amount).toLocaleString("es-AR")}</p>
         </div>
       ))}
     </div>
@@ -48,8 +48,22 @@ export const InOutMoneyView = () => {
     getTransactions().then((transactions) => setTransactions(transactions));
   }, []);
 
+  function getBalance() {
+    return transactions.reduce((prev, current) => {
+      if (current.type === "in") {
+        return prev + Number(current.amount);
+      } else {
+        return prev - Number(current.amount);
+      }
+    }, 0);
+  }
+
   return (
     <div className="InOutMoneyView">
+      <div className="InOutMoneyView_balance">
+        <h3>Balance</h3>
+        <p>${getBalance().toLocaleString("es-AR")}</p>
+      </div>
       <ChangeView view={view} handleChangeView={handleChangeView} />
       <div className="InOutView_item InOutView_item_titles ">
         <p className="InOutView_date">Fecha</p>

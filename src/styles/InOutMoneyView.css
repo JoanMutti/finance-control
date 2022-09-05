@@ -79,3 +79,18 @@
 .InOutView_item>* {
     text-transform: capitalize;
 }
+
+.InOutMoneyView_balance {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.InOutMoneyView_balance h3 {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.InOutMoneyView_balance p {
+    font-size: 32px;
+}

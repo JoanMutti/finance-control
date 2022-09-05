@@ -6,8 +6,8 @@ import AddTransactionForm from "./AddTransactionForm";
 
 const variants = {
   open: {
-    width: "300px",
-    minHeight: "80vh",
+    width: "calc(100% - 48px)",
+    minHeight: "85vh",
     borderRadius: "8px",
     backgroundColor: "var(--card-color)",
     bottom: "24px",
