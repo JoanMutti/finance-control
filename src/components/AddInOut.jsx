@@ -7,12 +7,13 @@ import AddTransactionForm from "./AddTransactionForm";
 const variants = {
   open: {
     width: "calc(100% - 48px)",
-    minHeight: "85vh",
+    height: "85vh",
     borderRadius: "8px",
     backgroundColor: "var(--card-color)",
     bottom: "24px",
   },
   closed: {
+    height: "40px",
     borderRadius: "50%",
     backgroundColor: "var(--green)",
   },
