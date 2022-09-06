@@ -38,7 +38,7 @@
 
 .InOutView_item {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 2fr 3fr 2fr;
     justify-content: center;
     margin-bottom: 8px;
     background-color: var(--card-color);

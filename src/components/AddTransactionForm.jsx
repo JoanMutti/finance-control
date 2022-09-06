@@ -10,6 +10,8 @@ const AddTransactionForm = () => {
   const [date, setDate] = useState(toDateInputValue(new Date()));
   const [method, setMethod] = useState("cash");
   const [reason, setReason] = useState("");
+  const [currency, setCurrency] = useState("peso");
+  const [comments, setComments] = useState("");
 
   const handleTypeChange = (e) => {
     setType(e.target.value);
@@ -17,6 +19,10 @@ const AddTransactionForm = () => {
 
   const handleMethodChange = (e) => {
     setMethod(e.target.value);
+  };
+
+  const handleCurrencyChange = (e) => {
+    setCurrency(e.target.value);
   };
 
   const handleSubmit = (e) => {
@@ -30,6 +36,8 @@ const AddTransactionForm = () => {
       year: dateSplited[0],
       method: method.toLowerCase(),
       reason: reason.toLowerCase(),
+      currency,
+      comments,
     }).then((res) => {
       console.log(res);
     });
@@ -45,15 +53,22 @@ const AddTransactionForm = () => {
       <select name="type" id="type" onChange={handleTypeChange}>
         <option value="in">Ingreso</option>
         <option value="out">Gasto</option>
+        <option value="saving">Ahorro</option>
+        <option value="invest">Inversión</option>
       </select>
       <Input value={date} handleChange={setDate} type="date" placeholder="Fecha" title="Fecha" />
+      <select name="currency" id="currency" onChange={handleCurrencyChange}>
+        <option value="peso">Pesos</option>
+        <option value="dolar">Dolares</option>
+        <option value="crypto">Crypto</option>
+      </select>
       <Input value={amount} handleChange={setAmount} type="number" placeholder="Monto" title="Monto" />
       <select name="method" id="method" onChange={handleMethodChange}>
-        <option value="cash">Efectivo</option>
         <option value="credit">Credito</option>
         <option value="debit">Debito</option>
       </select>
       <Input value={reason} handleChange={setReason} type="text" placeholder="Motivo" title="Motivo" />
+      <Input value={comments} handleChange={setComments} type="text" placeholder="Comentarios" title="Comentarios" />
       <input type="submit" value="Cargar" />
     </motion.form>
   );
