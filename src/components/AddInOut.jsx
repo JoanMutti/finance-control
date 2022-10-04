@@ -39,7 +39,7 @@ const AddInOut = () => {
       >
         +
       </motion.button>
-      <AddTransactionForm />
+      <AddTransactionForm handleOpen={handleOpen} />
       {/* )} */}
     </motion.div>
   );

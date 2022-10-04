@@ -71,7 +71,7 @@ export const InOutMoneyView = () => {
         <p>${getBalance().toLocaleString("es-AR")}</p>
       </div>
       <ChangeView view={view} handleChangeView={handleChangeView} />
-      <div className="InOutView_item InOutView_item_titles ">
+      <div className="InOutView_item InOutView_item_titles">
         <p className="InOutView_date">Fecha</p>
         <p className="InOutView_for">Motivo</p>
         <p className="InOutView_amount">Monto</p>

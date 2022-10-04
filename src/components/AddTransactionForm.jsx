@@ -6,7 +6,7 @@ import Input from "./Input";
 import OptionsInput from "./OptionsInput";
 import { outTypes } from "../assets/data";
 
-const AddTransactionForm = () => {
+const AddTransactionForm = ({ handleOpen }) => {
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState(toDateInputValue(new Date()));
   const [method, setMethod] = useState("cash");
@@ -49,6 +49,7 @@ const AddTransactionForm = () => {
       currency,
       comments,
     }).then((res) => {
+      handleOpen();
       console.log(res);
     });
   };
