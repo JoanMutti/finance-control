@@ -5,6 +5,8 @@ import Login from "../pages/Login";
 import "../styles/vars.css";
 import "../styles/App.css";
 import { useAuth } from "../hooks/useAuth";
+import Investing from "../pages/Investing";
+import Savings from "../pages/Savings";
 
 function App() {
   const auth = useAuth();
@@ -22,6 +24,8 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/ahorros" element={<Savings />} />
+          <Route path="/inversiones" element={<Investing />} />
         </Routes>
       </Layout>
     );

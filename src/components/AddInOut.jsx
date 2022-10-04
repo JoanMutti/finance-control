@@ -10,11 +10,8 @@ const variants = {
     height: "85vh",
     borderRadius: "8px",
     backgroundColor: "var(--card-color)",
-    bottom: "24px",
   },
   closed: {
-    height: "40px",
-    borderRadius: "50%",
     backgroundColor: "var(--green)",
   },
 };
@@ -35,7 +32,7 @@ const AddInOut = () => {
     <motion.div transition={{ duration: 0.3 }} className="AddInOut" variants={variants} animate={open ? "open" : "closed"}>
       <motion.button
         variants={{
-          open: { transform: "rotate(45deg)", margin: "16px 16px auto auto", color: "var(--primary-text)" },
+          open: { transform: "rotate(45deg)", color: "var(--primary-text)", margin: "16px 0px 16px auto" },
         }}
         className="btn_add"
         onClick={handleOpen}

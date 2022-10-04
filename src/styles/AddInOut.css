@@ -12,6 +12,7 @@
     border-radius: 50%;
     font-size: 32px;
     overflow-y: scroll;
+    max-height: 600px;
 }
 
 .btn_add {
@@ -20,6 +21,7 @@
     height: 40px;
     background-color: transparent;
     font-size: 32px;
+    line-height: 32px;
     margin: auto;
     cursor: pointer;
     color: black;
@@ -37,4 +39,8 @@
 
 .AddInOut input[submit] {
     margin-bottom: 24px;
+}
+
+.AddInOut input[date] {
+    width: 100%;
 }

@@ -5,6 +5,23 @@ import NavItems from "./NavItems";
 
 const navItems = [
   {
+    type: "navi",
+    text: "Inicio",
+    to: "/",
+  },
+  {
+    type: "navi",
+    text: "Ahorros",
+    to: "/ahorros",
+  },
+  {
+    type: "navi",
+    text: "Inversiones",
+    to: "/inversiones",
+  },
+
+  {
+    type: "common",
     text: "Cerrar Sesión",
     onClick: () => {
       auth.signOut();
